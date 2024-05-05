@@ -204,7 +204,7 @@ col4, col5 = st.columns([0.3,0.7])
 with col4:
     # Display the pivot table
     st.subheader('Zone & Bracket Wise Tickets', divider='rainbow',)
-    st.write(pivot_df.style.background_gradient(cmap='Oranges'))
+    st.write(pivot_df)
     
 subdata = df[['Eng. Status','Eng. Days Range']]
 p_df = subdata.pivot_table(index='Eng. Days Range', columns='Eng. Status',aggfunc='size',fill_value=0).rename_axis(index='Days_Range') 
